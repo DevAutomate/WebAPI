@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace APIOnline
+namespace APIOnline.Models
 {
     using System;
     using System.Data.Entity;
@@ -25,6 +25,6 @@ namespace APIOnline
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Tb1> Tb1 { get; set; }
+        public virtual DbSet<tblCustomer> tblCustomers { get; set; }
     }
 }

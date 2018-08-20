@@ -189,30 +189,31 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ModelAPI.Context.cs">
+    <Compile Include="Models\CRMModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelAPI.Context.tt</DependentUpon>
+      <DependentUpon>CRMModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelAPI.cs">
+    <Compile Include="Models\CRMModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelAPI.tt</DependentUpon>
+      <DependentUpon>CRMModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelAPI.Designer.cs">
+    <Compile Include="Models\CRMModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelAPI.edmx</DependentUpon>
+      <DependentUpon>CRMModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblCustomer.cs">
+      <DependentUpon>CRMModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tb1.cs">
-      <DependentUpon>ModelAPI.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -223,15 +224,15 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="ModelAPI.Context.tt">
+    <Content Include="Models\CRMModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelAPI.Context.cs</LastGenOutput>
-      <DependentUpon>ModelAPI.edmx</DependentUpon>
+      <DependentUpon>CRMModel.edmx</DependentUpon>
+      <LastGenOutput>CRMModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ModelAPI.tt">
+    <Content Include="Models\CRMModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelAPI.edmx</DependentUpon>
-      <LastGenOutput>ModelAPI.cs</LastGenOutput>
+      <DependentUpon>CRMModel.edmx</DependentUpon>
+      <LastGenOutput>CRMModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -257,12 +258,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="ModelAPI.edmx">
+    <EntityDeploy Include="Models\CRMModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelAPI.Designer.cs</LastGenOutput>
+      <LastGenOutput>CRMModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="ModelAPI.edmx.diagram">
-      <DependentUpon>ModelAPI.edmx</DependentUpon>
+    <Content Include="Models\CRMModel.edmx.diagram">
+      <DependentUpon>CRMModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -287,7 +288,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
