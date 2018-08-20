@@ -19,6 +19,8 @@ namespace APIOnline.Controllers
         // GET: api/Customers
         public IQueryable<tblCustomer> GettblCustomers()
         {
+
+            
             return db.tblCustomers;
         }
 
